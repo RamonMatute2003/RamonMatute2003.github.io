@@ -5,44 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Desarrollador de Videojuegos y .NET</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        header { background: #333; color: #fff; padding: 10px 20px; text-align: center; }
-        section { padding: 20px; margin: 5px; }
-        footer { background: #333; color: #fff; text-align: center; padding: 10px 20px; position: fixed; width: 100%; bottom: 0; }
-        h2 { color: #333; }
-        a { color: #06c; }
+        /* Estilos básicos */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+        header, footer { background: #20232a; color: white; padding: 1em 0; text-align: center; }
+        section { margin: 20px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Estilo del contenedor principal */
+        .container { width: 85%; max-width: 1200px; margin: auto; }
+        
+        /* Estilos para la navegación */
+        nav { text-align: center; margin-top: 10px; }
+        nav a { text-decoration: none; color: white; margin: 0 15px; font-size: 1.2em; }
+
+        /* Tarjetas de habilidades */
+        .skills { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .skill { background: #61dafb; padding: 10px; border-radius: 4px; margin: 10px; flex-basis: 30%; text-align: center; color: #20232a; font-size: 1.1em; }
+
+        /* Estilos del formulario */
+        form * { display: block; width: 90%; margin: 10px auto; }
+        input, textarea { padding: 10px; border-radius: 4px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background: #61dafb; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #4095c6; }
+
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            .skills .skill { flex-basis: 45%; }
+        }
+
+        @media (max-width: 480px) {
+            .skills .skill { flex-basis: 100%; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Portafolio de Desarrollador de Videojuegos y .NET</h1>
+        <div class="container">
+            <h1>Portafolio de Ramón Matute</h1>
+            <nav>
+                <a href="#about">Sobre Mí</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Soy un desarrollador de videojuegos y aplicaciones .NET apasionado por la creación de experiencias interactivas y sistemas robustos.</p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>Sobre Mí</h2>
+            <p>Soy un desarrollador de videojuegos y aplicaciones .NET apasionado por la creación de experiencias interactivas y sistemas robustos. Me especializo en la creación de soluciones digitales que son tanto innovadoras como eficientes.</p>
+        </section>
 
-    <section>
-        <h2>Proyectos destacados</h2>
-        <ul>
-            <li><strong>Videojuego XYZ</strong> - Un juego de aventuras desarrollado con Unity y C#. Más detalles <a href="#">aquí</a>.</li>
-            <li><strong>Aplicación ERP .NET</strong> - Una aplicación empresarial para la gestión de recursos, construida usando ASP.NET Core. Más detalles <a href="#">aquí</a>.</li>
-        </ul>
-    </section>
+        <section id="projects">
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li><strong>Videojuego XYZ</strong> - Un juego de aventuras desarrollado con Unity y C#. Más detalles <a href="#">aquí</a>.</li>
+                <li><strong>Aplicación ERP .NET</strong> - Una aplicación empresarial para la gestión de recursos, construida usando ASP.NET Core. Más detalles <a href="#">aquí</a>.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Contacto</h2>
-        <form>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Mensaje:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div class="skill">Unity</div>
+                <div class="skill">C#</div>
+                <div class="skill">.NET</div>
+                <div class="skill">ASP.NET</div>
+                <div class="skill">Blazor</div>
+                <div class="skill">SQL Server</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                <textarea id="message" name="message" rows="4" placeholder="Tu Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Ramón Matute. Todos los derechos reservados.</p>
